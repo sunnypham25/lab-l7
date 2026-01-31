@@ -1,0 +1,27 @@
+{
+  "schema": "bsv-app",
+  "schemaVersion": "1.0",
+  "frontend": {
+    "language": "react",
+    "sourceDirectory": "./frontend"
+  },
+  "configs": [
+    {
+      "name": "Local LARS",
+      "provider": "LARS",
+      "network": "mainnet",
+      "run": [
+        "frontend"
+      ]
+    },
+    {
+      "name": "Production",
+      "provider": "CARS",
+      "CARSCloudURL": "https://cars.babbage.systems",
+      "network": "mainnet",
+      "deploy": [
+        "frontend"
+      ]
+    }
+  ]
+}
